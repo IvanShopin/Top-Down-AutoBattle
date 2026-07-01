@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 749ff319daec3d64c905ac70f63c3fd9, type: 3}
   m_Name: Skeleton_Data
   m_EditorClassIdentifier: 
-  enemyName: "\u0421\u043B\u0430\u0439\u043C"
-  prefab: {fileID: 0}
-  maxHealth: 5
-  moveSpeed: 2
-  damage: 1
-  experienceReward: 3
+  enemyName: "\u0421\u043A\u0435\u043B\u0435\u0442"
+  prefab: {fileID: 7066769941083881650, guid: 8262fdb0fa2efcc48a1c534f22829c1e, type: 3}
+  maxHealth: 10
+  moveSpeed: 1.5
+  damage: 2
+  experienceReward: 7

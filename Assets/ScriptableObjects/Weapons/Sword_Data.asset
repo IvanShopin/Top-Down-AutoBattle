@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25c255237a50f6b44bbd5b9540f4d377, type: 3}
   m_Name: Sword_Data
   m_EditorClassIdentifier: 
-  weaponName: "\u041E\u0440\u0443\u0436\u0438\u0435"
-  damage: 1
-  attackRadius: 5
+  weaponName: "\u041C\u0435\u0447"
+  damage: 3
+  attackRadius: 3
   attacksPerSecond: 1
   projectilePrefab: {fileID: 0}
   projectileSpeed: 10

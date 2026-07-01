@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Slime_Data
   m_EditorClassIdentifier: 
   enemyName: "\u0421\u043B\u0430\u0439\u043C"
-  prefab: {fileID: 0}
+  prefab: {fileID: 7066769941083881650, guid: 8262fdb0fa2efcc48a1c534f22829c1e, type: 3}
   maxHealth: 5
   moveSpeed: 2
   damage: 1
