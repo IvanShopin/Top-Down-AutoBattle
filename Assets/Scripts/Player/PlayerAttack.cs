@@ -17,6 +17,15 @@ public class PlayerAttack : MonoBehaviour
 
     private float _timer; // счётчик времени между атаками
 
+    private void Awake()
+    {
+        // Создаём КОПИЮ ассета в памяти — именно её будем изменять перками.
+        // Оригинальный Sword_Data на диске остаётся нетронутым.
+        // Без этой строки изменения накапливались бы между запусками.
+        if (weapon != null)
+            weapon = Instantiate(weapon);
+    }
+
     private void Update()
     {
         if (weapon == null) return;
