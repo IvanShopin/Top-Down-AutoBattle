@@ -3,14 +3,14 @@ using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using TMPro;
 
-/// <summary>
+
 /// Синглтон-менеджер игры. Следит за состоянием:
 /// - Playing: обычный геймплей
 /// - GameOver: игрок умер → экран поражения
 /// - Victory: игрок выжил нужное время → экран победы
 ///
 /// Подписывается на PlayerController.OnDied и сам считает таймер победы.
-/// </summary>
+
 public class GameManager : MonoBehaviour
 {
     public static GameManager Instance { get; private set; }

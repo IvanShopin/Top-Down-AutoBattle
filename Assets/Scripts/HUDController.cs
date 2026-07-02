@@ -2,7 +2,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
-/// <summary>
+
 /// Контроллер HUD. Подписывается на события PlayerController и ExperienceManager
 /// и обновляет UI-элементы. Никакого опроса в Update — только реакция на события.
 ///
@@ -10,7 +10,7 @@ using TMPro;
 /// Update вызывается 60 раз в секунду. HP меняется раз в несколько секунд.
 /// Обновлять полосу 60 раз в секунду когда ничего не изменилось — лишняя работа.
 /// Событие срабатывает только тогда, когда значение реально изменилось.
-/// </summary>
+
 public class HUDController : MonoBehaviour
 {
     [Header("Полоска HP")]
