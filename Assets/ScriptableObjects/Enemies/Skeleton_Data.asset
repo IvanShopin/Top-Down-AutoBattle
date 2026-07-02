@@ -17,4 +17,4 @@ MonoBehaviour:
   maxHealth: 10
   moveSpeed: 1.5
   damage: 2
-  experienceReward: 7
+  experienceReward: 5

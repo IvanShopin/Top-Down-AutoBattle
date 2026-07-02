@@ -68,7 +68,13 @@ public class PlayerAttack : MonoBehaviour
             enemy.TakeDamage(weapon.damage);
         }
     }
-
+    /// Применяет бонусы перка к оружию. Вызывается из ExperienceManager.ApplyPerk().
+    public void ApplyPerkBonus(int bonusDamage, float bonusAttackSpeed, float bonusRadius)
+    {
+        weapon.damage += bonusDamage;
+        weapon.attacksPerSecond += bonusAttackSpeed;
+        weapon.attackRadius += bonusRadius;
+    }
     // OnDrawGizmosSelected — рисует вспомогательный круг радиуса атаки
     // прямо в окне Scene, когда объект Player выделен. Виден только в редакторе,
     // в игре не отображается. Удобно для настройки баланса.

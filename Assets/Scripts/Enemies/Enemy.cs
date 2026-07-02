@@ -8,6 +8,9 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
+    [Header("Префаб орба опыта")]
+    [SerializeField] private GameObject expOrbPrefab;
+
     private EnemyData _data;       // ссылка на ScriptableObject с характеристиками
     private Transform _target;     // цель движения (Transform игрока)
     private int _currentHealth;    // текущее HP (изменяется в ходе боя)
@@ -57,8 +60,14 @@ public class Enemy : MonoBehaviour
     {
         // Уведомляем подписчиков (например, спавнер опыта на день 2).
         OnDied?.Invoke(this);
-
-        // Ключевой момент: НЕ Destroy, а возврат в пул!
+        // Спавним орб опыта в точке смерти врага.
+        if (expOrbPrefab != null)
+        {
+            GameObject orb = PoolManager.Instance.Get(expOrbPrefab, transform.position, Quaternion.identity);
+            if (orb.TryGetComponent(out ExpOrb expOrb))
+                expOrb.Initialize(_data.experienceReward);
+        }
+        // НЕ Destroy, а возврат в пул!
         // Объект просто станет SetActive(false) и будет ждать следующего спавна.
         PoolManager.Instance.Release(gameObject);
     }
