@@ -58,8 +58,14 @@ public class Enemy : MonoBehaviour
 
     private void Die()
     {
+
         // Уведомляем подписчиков (например, спавнер опыта на день 2).
         OnDied?.Invoke(this);
+
+        // Уведомляем GameManager — он обновит счётчик убийств в HUD.
+        if (GameManager.Instance != null)
+            GameManager.Instance.OnEnemyKilled();
+
         // Спавним орб опыта в точке смерти врага.
         if (expOrbPrefab != null)
         {
